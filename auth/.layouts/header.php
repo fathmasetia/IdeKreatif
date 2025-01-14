@@ -5,8 +5,6 @@ $notification = $_SESSION['notiication'] ?? null;
 if ($notification) {
   unset($_SESSION['notification']);
 }
-
-
 if (isset($_SESSION["username"]) || isset($_SESSION["role"])) {
   $_SESSION['notification'] = [
     'type' => 'danger',
