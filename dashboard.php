@@ -1,6 +1,6 @@
 <?php
 include (".includes/header.php");
-$title = "Dasboard";
+$title = "Dashboard";
 // menyertakan file untuk menamilkan notifikasi (jika ada)
 include '.includes/toast_notification.php';
 ?>
@@ -58,13 +58,14 @@ include '.includes/toast_notification.php';
                                     <!-- menu dropdown -->
                                      <div class="dropdown-menu">
                                         <!-- pilihan edit -->
-                                         <a href="edit_post.php?post_id=<?= $post['id_post'] ?>"
+                                         <a href="edit_post.php?post_id=<?= $post['id_post']; ?>"
                                          class="dropdown-item">
-                                         <i class="bx bx-edit-alt me-2">Edit</i>
+                                         <i class="bx bx-edit-alt me-2"></i>Edit
                                          </a>
                                          <!-- pilihan delete -->
                                           <a href="#" class="dropdown-item" data-bs-toggle="modal"
                                           data-bs-target="#deletePost_<?= $post['id_post']; ?>">
+                                          <i class="bx bx-trash me-2"></i> Delete
                                         </a>
                                      </div>
                                 </div>
@@ -90,7 +91,7 @@ include '.includes/toast_notification.php';
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-outline-secondary"
                                             data-bs-dismiss="modal">Batal</button>
-                                            <button type="submit" name="delete"class="btn btn-primary">Hapus</button>
+                                            <button type="submit" name="delete" class="btn btn-primary">Hapus</button>
                                         </div>
                                     </form>
                                 </div>
@@ -109,3 +110,4 @@ include '.includes/toast_notification.php';
 
 <?php
 include (".includes/footer.php");
+?>
